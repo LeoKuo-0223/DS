@@ -31,12 +31,12 @@ void Stack::push(int integer){			//push integer into the stack
 }
 
 void Stack::pop(){		//pop out the top object from stack
-	if(isEmpty()) cout<<"stack is empty";
+	if(isEmpty()); //cout<<"stack is empty";
 	else array[top--];
 }
 
 int Stack::Top() const{		//read the top object in the stack
-	if(isEmpty()) cout<<"stack is empty";
+	if(isEmpty()) ;//cout<<"stack is empty";
 	else {
 		return array[top];
 	}
@@ -141,10 +141,6 @@ void path(){	//control the path of rat
 
 	}
 	cout<<"Failed to escape."<<endl;
-	for(int i=0;i<17;i++){
-		for(int j=0;j<17;j++) mark[i][j]=0;	//reset the record of coodinates for next mazing problem
-	}
-	step=0; //reset step count
 }
 
 int main(){
@@ -178,5 +174,16 @@ int main(){
 			cin>>endPosR>>endPosC;
 		}
 		path(); //function to control the rat and print the steps
+
+		for(int i=0;i<17;i++){
+			for(int j=0;j<17;j++) mark[i][j]=0;	//reset the record of coodinates for next mazing problem
+		}
+		step=0; //reset step count
+		while(!rowStack.isEmpty()){ //clear rowStack
+			rowStack.pop();
+		}
+		while(!colStack.isEmpty()){  //clear colStack
+			colStack.pop();
+		}
 	}
 }
