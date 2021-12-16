@@ -3,7 +3,7 @@
 #include<stdlib.h>
 #include<fstream>
 #include<cstdlib>
-#define NUM 100
+#define NUM 1200
 using namespace std;
 int mode;
 
@@ -151,7 +151,7 @@ class BST{          //declare Binary Search Tree
         void levelorder();
         void visit(Node *node){ cout<<" "<<node->key;}
         void printTraversal(){
-            cout<<"The tree in prefox order : ";
+            cout<<"The tree in prefix order : ";
             preorderT(root);
             cout<<endl<<"The tree in infix order : ";
             inorderT(root);
@@ -335,14 +335,14 @@ void BST::DeleteAllNode(Node* node){    //after the function of finding meaty, r
 }
 
 void BST::path(BST bst,int *map,int count,int swordloc,int meatloc){    //bring the parameter to find the path
-    int ansPath[50]={-1};               //use to save the fastest path
+    int ansPath[2000]={-1};               //use to save the fastest path
     Node *current_node_sword = bst.root;    
     Node *current_node_meat= bst.root;
     Stack<int> nodeStack_sword;     //use to record the path of finding sword, and go back with Top(),pop() function
     
     bool findcommonNode = false;
     int commonNode_key;
-    int pathToMeat[100];
+    int pathToMeat[1000];
     int steps_meat=0;
     int steps_ans=0;
     for(;;){    //path to sword
@@ -428,8 +428,8 @@ int main(){
     bool escape=false;
     bool finishmode=false;
     string filename;
-    char filetext[5];
-    int map[14];
+    char filetext[6];
+    int map[1200];
     int count=0;
     int swordloc,meatloc,broccoliIndex;
     while(!escape){
