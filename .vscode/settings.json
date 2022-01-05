@@ -4,6 +4,17 @@
         "ostream": "cpp",
         "iosfwd": "cpp",
         "cstdlib": "cpp",
-        "fstream": "cpp"
+        "fstream": "cpp",
+        "type_traits": "c",
+        "xutility": "cpp",
+        "vector": "cpp",
+        "istream": "cpp",
+        "sstream": "cpp",
+        "xstring": "cpp",
+        "string": "cpp",
+        "queue": "cpp",
+        "set": "cpp",
+        "deque": "cpp",
+        "xtree": "cpp"
     }
 }
