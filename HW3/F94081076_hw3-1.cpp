@@ -25,7 +25,7 @@ void inorderTraversal(struct Node* root){   //define inorder Traversal
         return;
     }else{
         inorderTraversal(root->left);
-        cout<<root->key<<" ";
+        // cout<<root->key<<" ";
         output.push_back(root->key);
         inorderTraversal(root->right);
     }
@@ -36,7 +36,7 @@ void preorderTraversal(struct Node* root){  //define preorder Traversal
     if (root == NULL) {
         return;
     }else{
-        cout<<root->key<<" ";
+        // cout<<root->key<<" ";
         output.push_back(root->key);
         preorderTraversal(root->left);
         preorderTraversal(root->right);
@@ -49,7 +49,7 @@ void postorderTraversal(struct Node* root){ //define postorder Traversal
     }else{
         postorderTraversal(root->left);
         postorderTraversal(root->right);
-        cout<<root->key<<" ";
+        // cout<<root->key<<" ";
         output.push_back(root->key);
     }
 }
@@ -127,7 +127,7 @@ int main(){
     string outputfileName;
     ifstream fin;
     ofstream outputfin;
-    cout<<"Please input the map file: ";
+    cout<<"Please input the file: ";
     cin>>filename;
     outputfileName = filename;
     outputfileName.replace(outputfileName.find("input"), 5, "output");
@@ -166,7 +166,7 @@ int main(){
                 struct Node* root = InPreBuildTree(inorder, preorder, length);  //delare the root node and start to build the tree
 
                 postorderTraversal(root);   //traversal by postorder
-                cout<<endl;
+                // cout<<endl;
                 if(outputfin.is_open()){
                     for(int x=0;x<num_Node;x++){
                         outputfin<<output[x]<<' ';  //write the answer in the output file
@@ -202,7 +202,7 @@ int main(){
                 struct Node* root = InPostBuildTree(inorder, postorder, length);    //declare the root node and start to build tree
 
                 preorderTraversal(root);    //traversal in preorder
-                cout<<endl;
+                // cout<<endl;
                 if(outputfin.is_open()){
                     for(int x=0;x<num_Node;x++){
                         outputfin<<output[x]<<' ';      //write the answer in the output file

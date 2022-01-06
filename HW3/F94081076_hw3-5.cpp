@@ -108,7 +108,7 @@ int main(){
     string outputfileName;
     ifstream fin;
     ofstream outputfin;
-    cout<<"Please input the map file: ";
+    cout<<"Please input the file: ";
     cin>>filename;
     outputfileName = filename;
     outputfileName.replace(outputfileName.find("input"), 5, "output");  //create output file name
