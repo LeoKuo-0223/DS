@@ -85,6 +85,7 @@ void Graph::DFS(){
     fill(costRecord,costRecord+N,0);    //initial the value 
     fill(visited,visited+N,false);
     DFS(root);  //start to DFS from root
+    delete []visited;
 }
 
 const vector<string> split(const string &str, const char &delimiter) {  //split the string by designated char value

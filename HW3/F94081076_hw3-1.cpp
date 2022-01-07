@@ -122,7 +122,7 @@ int main(){
 	const char postinorder[] = "postorder-inorder";
 	char orderType[18];
 	int num_Node;
-    char filetext[2048];
+    char filetext[4096];
     string filename;
     string outputfileName;
     ifstream fin;

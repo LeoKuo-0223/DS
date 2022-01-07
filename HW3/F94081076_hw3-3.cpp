@@ -60,7 +60,7 @@ int main(){
     int num_set;
     int num_vertices;
     int vertex_index;
-    char filetext[2048];
+    char filetext[4096];
     Graph *graph;       //declare the pointer with Graoh type
     string filename;
     string outputfileName;
